@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>a-02</title>
+</head>
+<body>
+    <table>
+        <tr th:each="bouquet : ${bouquets}">
+            <!--/*@thymesVar id="bouquet" type="com.example.a02.data.gen.Bouquet"*/-->
+            <td th:href="@{/bouquet(name=${bouquet.getName()})}"></td>
+        </tr>
+    </table>
+</body>
+</html>
